@@ -13,13 +13,23 @@ import random
 from datetime import datetime
 
 # Import backend components
-from .env.crisis_env import CrisisEnv
-from .env.multi_agent_env import MultiAgentEnv
-from .agent.greedy_agent import GreedyAgent
-from .agent.conservative_agent import ConservativeAgent
-from .agent.llm_agent import LLMAgent
-from .training.safety import check_safety_constraints
-from .logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
+try:
+    from env.crisis_env import CrisisEnv
+    from env.multi_agent_env import MultiAgentEnv
+    from agent.greedy_agent import GreedyAgent
+    from agent.conservative_agent import ConservativeAgent
+    from agent.llm_agent import LLMAgent
+    from training.safety import check_safety_constraints
+    from logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
+except ImportError:
+    # Try relative imports as fallback
+    from .env.crisis_env import CrisisEnv
+    from .env.multi_agent_env import MultiAgentEnv
+    from .agent.greedy_agent import GreedyAgent
+    from .agent.conservative_agent import ConservativeAgent
+    from .agent.llm_agent import LLMAgent
+    from .training.safety import check_safety_constraints
+    from .logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
 
 # Initialize components with coordinate-based system
 env = CrisisEnv(max_steps=20, ambulances_per_agent=2, single_agent_mode=True)
