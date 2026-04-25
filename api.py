@@ -68,6 +68,23 @@ def init_backend():
         traceback.print_exc()
         SECIS_BACKEND_AVAILABLE = False
 
+# Pydantic models
+class ActionRequest(BaseModel):
+    action: str
+    target: Any
+    reason: str
+
+
+class StepRequest(BaseModel):
+    agent_type: str = "adaptive"
+    multi_agent: bool = False
+
+
+class ControlParametersRequest(BaseModel):
+    difficulty: Optional[float] = Field(None, ge=0.0, le=1.0, description="Difficulty level (0-1)")
+    adversarial_level: Optional[float] = Field(None, ge=0.0, le=1.0, description="Adversarial level (0-1)")
+    tick_interval: Optional[int] = Field(None, ge=100, le=5000, description="Tick interval in ms (100-5000)")
+
 # Health check endpoint
 @app.get("/api/health")
 async def health_check():
@@ -360,69 +377,6 @@ def log_telemetry(reward: float, incident_count: int, response_time: float, over
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-# Pydantic models
-class ActionRequest(BaseModel):
-    action: str
-    target: Any
-    reason: str
-
-
-class StepRequest(BaseModel):
-    agent_type: str = "adaptive"
-    multi_agent: bool = False
-
-
-class ControlParametersRequest(BaseModel):
-    difficulty: Optional[float] = Field(None, ge=0.0, le=1.0, description="Difficulty level (0-1)")
-    adversarial_level: Optional[float] = Field(None, ge=0.0, le=1.0, description="Adversarial level (0-1)")
-    tick_interval: Optional[int] = Field(None, ge=100, le=5000, description="Tick interval in ms (100-5000)")
-
-
-
-@app.get("/api/health")
-async def health_check():
-    """Health check endpoint for Docker and OpenEnv"""
-    return {"status": "healthy", "service": "SECIS OpenEnv"}
-
-
-# Helper functions
-def log_telemetry(reward: float, incident_count: int, response_time: float, overflow: bool, 
-                 efficiency: float = 0.0, fairness: float = 0.0, survival: float = 0.0,
-                 hospital_deliveries: int = 0, hospital_occupancy: float = 0.0):
-    """Log telemetry data to JSON file"""
-    try:
-        telemetry_data = {
-            "timestamp": datetime.now().isoformat(),
-            "reward": reward,
-            "incident_count": incident_count,
-            "response_time": response_time,
-            "overflow": overflow,
-            "efficiency": efficiency,
-            "fairness": fairness,
-            "survival": survival,
-            "hospital_deliveries": hospital_deliveries,
-            "hospital_occupancy": hospital_occupancy
-        }
-        
-        # Read existing telemetry
-        telemetry = []
-        if os.path.exists(TELEMETRY_FILE):
-            with open(TELEMETRY_FILE, 'r') as f:
-                telemetry = json.load(f)
-        
-        # Add new entry
-        telemetry.append(telemetry_data)
-        
-        # Keep only last 100 entries
-        telemetry = telemetry[-100:]
-        
-        # Write back
-        with open(TELEMETRY_FILE, 'w') as f:
-            json.dump(telemetry, f, indent=2)
-    except Exception as e:
-        print(f"Error logging telemetry: {e}")
-
 
 def run_episode_with_agent(agent, agent_name: str) -> float:
     """Run a 20-step episode with the specified agent and return total reward"""
