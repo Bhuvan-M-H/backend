@@ -3,33 +3,28 @@ FastAPI Backend for SECIS-SA WA Hybrid
 RESTful API endpoints for environment interaction and agent control
 """
 
+import sys
+import os
+
+# Add current directory to Python path for absolute imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Dict, Any, List, Optional
 import json
-import os
 import random
 from datetime import datetime
 
-# Import backend components
-try:
-    from env.crisis_env import CrisisEnv
-    from env.multi_agent_env import MultiAgentEnv
-    from agent.greedy_agent import GreedyAgent
-    from agent.conservative_agent import ConservativeAgent
-    from agent.llm_agent import LLMAgent
-    from training.safety import check_safety_constraints
-    from logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
-except ImportError:
-    # Try relative imports as fallback
-    from .env.crisis_env import CrisisEnv
-    from .env.multi_agent_env import MultiAgentEnv
-    from .agent.greedy_agent import GreedyAgent
-    from .agent.conservative_agent import ConservativeAgent
-    from .agent.llm_agent import LLMAgent
-    from .training.safety import check_safety_constraints
-    from .logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
+# Import backend components using absolute imports
+from env.crisis_env import CrisisEnv
+from env.multi_agent_env import MultiAgentEnv
+from agent.greedy_agent import GreedyAgent
+from agent.conservative_agent import ConservativeAgent
+from agent.llm_agent import LLMAgent
+from training.safety import check_safety_constraints
+from logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
 
 # Initialize components with coordinate-based system
 env = CrisisEnv(max_steps=20, ambulances_per_agent=2, single_agent_mode=True)
