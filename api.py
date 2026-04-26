@@ -51,22 +51,28 @@ def init_backend():
         return
     
     try:
-        from env.crisis_env import CrisisEnv
-        from env.multi_agent_env import MultiAgentEnv
-        from agent.greedy_agent import GreedyAgent
-        from agent.conservative_agent import ConservativeAgent
-        from agent.llm_agent import LLMAgent
-        from training.safety import check_safety_constraints
-        from logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
-        
-        env = CrisisEnv(max_steps=20, ambulances_per_agent=2, single_agent_mode=True)
-        multi_agent_env = MultiAgentEnv(max_steps=20)
-        greedy_agent = GreedyAgent()
-        conservative_agent = ConservativeAgent()
-        llm_agent = LLMAgent()
-        TELEMETRY_FILE = os.path.join(os.path.dirname(__file__), "logs", "telemetry.json")
-        SECIS_BACKEND_AVAILABLE = True
-        print("SECIS backend initialized successfully")
+        # Try to import environment components
+        try:
+            from env.crisis_env import CrisisEnv
+            from env.multi_agent_env import MultiAgentEnv
+            from agent.greedy_agent import GreedyAgent
+            from agent.conservative_agent import ConservativeAgent
+            from agent.llm_agent import LLMAgent
+            from training.safety import check_safety_constraints
+            from logs.reflection_logger import log_step_reflection, get_reflection_logs, clear_reflection_logs
+            
+            env = CrisisEnv(max_steps=20, ambulances_per_agent=2, single_agent_mode=True)
+            multi_agent_env = MultiAgentEnv(max_steps=20)
+            greedy_agent = GreedyAgent()
+            conservative_agent = ConservativeAgent()
+            llm_agent = LLMAgent()
+            TELEMETRY_FILE = os.path.join(os.path.dirname(__file__), "logs", "telemetry.json")
+            SECIS_BACKEND_AVAILABLE = True
+            print("SECIS backend initialized successfully")
+        except ImportError as ie:
+            print(f"Import error: {ie}")
+            print("SECIS backend components not available, using fallback")
+            SECIS_BACKEND_AVAILABLE = False
     except Exception as e:
         print(f"Error initializing SECIS backend: {e}")
         import traceback
