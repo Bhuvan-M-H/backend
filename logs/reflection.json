@@ -1,0 +1,926 @@
+[
+  {
+    "timestamp": "2026-04-25T13:13:55.402690",
+    "step": 1,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_init_3253",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_init_3253 (severity: 0.70)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.21400000000000002,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": -0.05,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.004,
+        "incident_penalty": -0.15000000000000002,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.21400000000000002,
+        "efficiency_score": 50.0,
+        "survival_score": 44.7247141726576,
+        "fairness_score": 100,
+        "competition_score": 98.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 4,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:13:56.403197",
+    "step": 2,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_init_7152",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_init_7152 (severity: 0.67)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 4,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": 4.8340000000000005,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 5.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": -0.05,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.006,
+        "incident_penalty": -0.1,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": 4.8340000000000005,
+        "efficiency_score": 50.0,
+        "survival_score": 58.32808690316935,
+        "fairness_score": 100,
+        "competition_score": 97.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 4,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:13:57.400961",
+    "step": 3,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_init_6141",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_init_6141 (severity: 0.56)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 4,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.08,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.02,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.010000000000000002,
+        "incident_penalty": -0.05,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.08,
+        "efficiency_score": 100,
+        "survival_score": 70.84452014803757,
+        "fairness_score": 100,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 4,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:13:58.402490",
+    "step": 4,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 4,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.07600000000000001,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.02,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.006000000000000001,
+        "incident_penalty": -0.05,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.07600000000000001,
+        "efficiency_score": 100,
+        "survival_score": 70.84452014803757,
+        "fairness_score": 100,
+        "competition_score": 97.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 4,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:13:59.400201",
+    "step": 5,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": 9.84,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 10.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": -0.1,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.010000000000000002,
+        "incident_penalty": -0.05,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": 9.84,
+        "efficiency_score": 0,
+        "survival_score": 58.344520148037574,
+        "fairness_score": 100,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 2,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:00.408528",
+    "step": 6,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_init_3202",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_init_3202 (severity: 0.56)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 3,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.32,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": -0.05,
+        "fairness_penalty": -0.2,
+        "load_balance_penalty": -0.010000000000000002,
+        "incident_penalty": -0.05,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.32,
+        "efficiency_score": 50.0,
+        "survival_score": 56.68676864476046,
+        "fairness_score": 0,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 3,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:01.406205",
+    "step": 7,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_cascade_4176",
+      "reason": "Adaptive: High severity incidents ignored, switching to greedy strategy - Target: inc_cascade_4176 (severity: 0.89)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 3,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.032,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.02,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.012,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.032,
+        "efficiency_score": 100,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 94.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 3,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:02.405786",
+    "step": 8,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": 4.984,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 5.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.006,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": 4.984,
+        "efficiency_score": 50.0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 97.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 2,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:03.400555",
+    "step": 9,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 2,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.018,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.007999999999999998,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.018,
+        "efficiency_score": 50.0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 96.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 2,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:04.402615",
+    "step": 10,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 1,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": 4.994,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 5.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.006,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": 4.994,
+        "efficiency_score": 0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 97.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 1,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:05.406104",
+    "step": 11,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 1,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.009999999999999998,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.009999999999999998,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.009999999999999998,
+        "efficiency_score": 0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 1,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:06.406687",
+    "step": 12,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.009999999999999998,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.009999999999999998,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.009999999999999998,
+        "efficiency_score": 0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 1,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:07.402619",
+    "step": 13,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.014000000000000002,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.014000000000000002,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.014000000000000002,
+        "efficiency_score": 0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 93.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 1,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:08.403284",
+    "step": 14,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.16000000000000003,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": -0.1,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.010000000000000004,
+        "incident_penalty": -0.05,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.16000000000000003,
+        "efficiency_score": 0,
+        "survival_score": 58.27610519430003,
+        "fairness_score": 100,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 2,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:09.406086",
+    "step": 15,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_cascade_8542",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_cascade_8542 (severity: 0.56)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.11800000000000001,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": -0.05,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.008000000000000002,
+        "incident_penalty": -0.05,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.11800000000000001,
+        "efficiency_score": 50.0,
+        "survival_score": 69.0530085899048,
+        "fairness_score": 100,
+        "competition_score": 96.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 3,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:10.403444",
+    "step": 16,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_cascade_4785",
+      "reason": "Adaptive: Default greedy strategy - Target: inc_cascade_4785 (severity: 0.48)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": 4.976,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 5.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.014000000000000002,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": 4.976,
+        "efficiency_score": 50.0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 93.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 3,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:11.401029",
+    "step": 17,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 0,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.324,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": -0.05,
+        "fairness_penalty": -0.2,
+        "load_balance_penalty": -0.014000000000000002,
+        "incident_penalty": -0.05,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.324,
+        "efficiency_score": 50.0,
+        "survival_score": 64.78584468081962,
+        "fairness_score": 0,
+        "competition_score": 93.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 4,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:12.402686",
+    "step": 18,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_cascade_1369",
+      "reason": "Adaptive: High severity incidents ignored, switching to greedy strategy - Target: inc_cascade_1369 (severity: 0.76)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 4,
+      "schema_drift": true,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.034,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.02,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.014000000000000002,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.034,
+        "efficiency_score": 100,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 93.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 4,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:13.401415",
+    "step": 19,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 2,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": 9.99,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 10.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.009999999999999998,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": 9.99,
+        "efficiency_score": 0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 2,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:14:14.397846",
+    "step": 20,
+    "agent": "adaptive",
+    "action": {
+      "type": "wait",
+      "target": null,
+      "reason": "Adaptive: Default greedy strategy - No incidents to respond to or no idle ambulances"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 2,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.009999999999999998,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.0,
+        "resource_penalty": 0.0,
+        "fairness_penalty": -0.0,
+        "load_balance_penalty": -0.009999999999999998,
+        "incident_penalty": -0.0,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.009999999999999998,
+        "efficiency_score": 0,
+        "survival_score": 100.0,
+        "fairness_score": 100,
+        "competition_score": 95.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 2,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": true
+    }
+  },
+  {
+    "timestamp": "2026-04-25T13:15:15.707603",
+    "step": 1,
+    "agent": "adaptive",
+    "action": {
+      "type": "dispatch ambulance",
+      "target": "inc_init_2452",
+      "reason": "Adaptive: High severity incidents ignored, switching to greedy strategy - Target: inc_init_2452 (severity: 0.90)"
+    },
+    "what_happened": {
+      "incidents_resolved": 0,
+      "incidents_spawned": 4,
+      "schema_drift": false,
+      "hospital_occupied": 0,
+      "hospital_capacity": 100
+    },
+    "reward": {
+      "total": -0.6140000000000001,
+      "breakdown": {
+        "base": 0.0,
+        "delivery_reward": 0.0,
+        "travel_penalty": -0.01,
+        "resource_penalty": -0.05,
+        "fairness_penalty": -0.4,
+        "load_balance_penalty": -0.004,
+        "incident_penalty": -0.15000000000000002,
+        "duplicate_dispatch_penalty": -0.0,
+        "delay_penalty": -0.0,
+        "total": -0.6140000000000001,
+        "efficiency_score": 50.0,
+        "survival_score": 41.52969217998621,
+        "fairness_score": 33.333333333333336,
+        "competition_score": 98.0
+      }
+    },
+    "state_snapshot": {
+      "active_incidents": 4,
+      "ambulances_idle": 0,
+      "ambulances_responding": 0
+    },
+    "metadata": {
+      "done": false
+    }
+  }
+]
