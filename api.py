@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from typing import Dict, Any, List, Optional
 import json
@@ -28,6 +29,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Mount static files for frontend
+if os.path.exists("frontend/dist"):
+    app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="frontend")
 
 # Import and initialize backend components lazily
 env = None
